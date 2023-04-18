@@ -1,0 +1,83 @@
+.wrapper{
+    box-shadow: var(--box-shadow);
+    padding-bottom: 12px;
+}
+
+.images{
+    padding-top: 130%;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 20px;
+
+    img{
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 100%;
+        object-fit: cover;
+
+        &:nth-child(1) {
+            transform: translateX(-50%) scale(1);
+            transition: transform 0.5s ease;
+        }
+
+        &:nth-child(2) {
+            transform: translateX(-50%) scale(0);
+        }
+    }
+
+    &:hover img {
+        &:nth-child(1) {
+            transform: translateX(-50%) scale(0);
+        }
+
+        &:nth-child(2) {
+            transform: translateX(-50%) scale(1);
+            transition: transform 0.5s ease;
+        }
+    }
+}
+
+.info{
+    box-shadow: var(--box-shadow);
+}
+
+.name{
+    margin-bottom: 10px;
+    color: var(--txt-second-color);
+    font-weight: normal;
+    padding-left: 12px;
+    display: block;
+  	display: -webkit-box;
+  	height: 16px*1.3*2;
+  	font-size: 16px;
+  	line-height: 1.3;
+  	-webkit-line-clamp: 2;  /* số dòng hiển thị */
+  	-webkit-box-orient: vertical;
+  	overflow: hidden;
+  	text-overflow: ellipsis;
+}
+
+.price{
+    width: 100%;
+    color: var(--txt-main-color);
+    font-size: 2ch;
+    font-weight: 600;
+    margin-bottom: 10px;
+    padding-left: 12px;
+
+    .priceCurent{
+
+    }
+
+    .priceOld{
+        color: var(--txt-second-color);
+        margin-left: 20px;
+        font-weight: 300;
+    }
+}
+
+.btn{
+    margin-left: 12px;
+}

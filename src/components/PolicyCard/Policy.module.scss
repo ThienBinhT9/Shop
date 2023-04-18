@@ -1,0 +1,52 @@
+.wrapper{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 15px;
+    padding-left: 0;
+    box-shadow: var(--box-shadow);
+    transition: transform 0.5s ease;
+    height: 100%;
+    cursor: pointer;
+    &:hover{
+        transform: translateY(-20px);
+    }
+
+    .icon{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 30%;
+        color: var(--main-color);
+
+        svg{
+            font-size: 2rem;
+
+            @media (max-width:1024px) {
+                font-size: 1.7rem;
+            }
+
+            @media (max-width:600px) {
+                font-size: 1.5rem;
+            }
+
+            @media (max-width:500px) {
+                font-size: 2rem;
+            }
+        }
+    }
+
+    .info{
+
+        .name{
+            font-size: 1.25rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .desc{
+            font-size: 1rem;
+            color: var(--txt-second-color);
+        }
+    }
+}

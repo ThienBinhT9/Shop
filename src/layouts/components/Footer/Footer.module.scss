@@ -1,0 +1,41 @@
+.wrapper{
+    box-shadow: var(--box-shadow);
+    padding: 60px 0;
+}
+
+.content{
+    width: 90%;
+    margin:  0 auto;
+}
+
+.item{
+
+    .item__title{
+        font-size: 1rem;
+        margin-bottom: 20px;
+    }
+    
+    .item__body{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        .item__body__item{
+            margin-bottom: 12px;
+            display: flex;
+            align-items: center;
+
+            .tel{
+                line-height: 25px;
+                margin-left: 4px;
+                font-weight: bold;
+            }
+        }
+    }
+
+}
+
+.logo{
+    width: 100px;
+    margin-bottom: 20px;
+}

@@ -1,0 +1,117 @@
+.wrapper{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: var(--header-height);
+    transition: height 0.5s ease;
+    z-index: 99;
+
+    @media (max-width:1024px) {
+        height: var(--header-tablet-height);
+        background-color: var(--main-bg);
+        box-shadow: var(--box-shadow);
+    }
+
+    @media (max-width:600px) {
+        position: fixed;
+        top: unset;
+        bottom: 0;
+        background-color: var(--main-bg);
+        height: var(--header-mobile-height) !important;
+        box-shadow: var(--box-shadow);
+        left: 0;
+        right: 0;
+        z-index: 150;
+        overflow: hidden;
+    }
+}
+
+.shrink{
+    height: var(--header-shrink-height);
+    box-shadow: var(--box-shadow);
+    background-color: var(--main-bg);
+}
+
+.inner{
+    width: 90%;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @media (max-width:600px) {
+        justify-content: space-evenly;
+    }
+}
+
+.btn-menu-bars{
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    display: inline-block;
+    font-size: 22px;
+    cursor: pointer;
+
+    @media (max-width:600px) {
+        flex: 0;
+    }
+}
+
+.navLeft{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    
+    .navLeft__item{
+        margin-right: 20px;
+    }
+}
+
+.logo{
+    width: 100px;
+}
+
+.navRight{
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+
+    @media (max-width:600px) {
+        justify-content: space-between;
+    }
+
+    .navRight__item{
+        font-size: 22px;
+        margin-left: 40px;
+        cursor: pointer;
+        color: #444;
+        position: relative;
+
+        .quantity-cart{
+            position: absolute;
+            background-color: #666;
+            font-size: 10px;
+            width: 18px;
+            height: 18px;
+            color: #fff;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            top: -4px;
+            right: -10px;
+        }
+
+    }
+   
+}
+
+.active{
+    color: var(--main-color) !important;
+    font-weight: 600;
+}

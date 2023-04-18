@@ -1,0 +1,38 @@
+.wrapper{
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .gears{
+        margin-bottom: 20px;
+        font-size: 5rem;
+        color: #444;
+    }
+
+    h3{
+        font-size: 2rem;
+        transition: 0.5s;
+
+        a{
+            text-decoration: underline;
+            color: var(--main-color);
+            transition: 0.5s;
+            
+            &:hover{
+                font-size: 2.1rem;
+                transition: 0.5s;
+            }
+        }
+    }
+}
+
+@keyframes spinerAround {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate('360deg');
+    }
+}
